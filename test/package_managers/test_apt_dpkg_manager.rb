@@ -148,7 +148,7 @@ module Autoproj
                 assert_version '57:1.2.3abYZ+~-4-5', EQUAL, '57:1.2.3abYZ+~-4-5' # and those too
                 assert_version '1.2.3', EQUAL, '0:1.2.3' # zero epoch
                 assert_version '1.2.3', EQUAL, '1.2.3-0' # zero revision
-                assert_version '009', EQUAL, '9' # zeroes…
+                assert_version '009', EQUAL, '9' # zeroes
                 assert_version '009ab5', EQUAL, '9ab5' # there as well
                 assert_version '1.2.3', LESS, '1.2.3-1' # added non-zero revision
                 assert_version '1.2.3', LESS, '1.2.4' # just bigger
@@ -179,4 +179,3 @@ module Autoproj
         end
     end
 end
-
