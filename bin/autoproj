@@ -2,7 +2,7 @@
 
 begin
     require 'yomikomu'
-rescue LoadError
+rescue LoadError # rubocop:disable Lint/HandleExceptions
 end
 
 require 'autoproj/cli'
@@ -11,6 +11,6 @@ argv = Autoproj::CLI.basic_setup
 
 begin
     Autoproj::CLI::Main.start(argv)
-rescue Interrupt
+rescue Interrupt # rubocop:disable Lint/HandleExceptions
     # Already notified in the reporting infrastructure
 end
